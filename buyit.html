@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>main content</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="format.css">
+
+    
+    
+    <style>
+              
+        h1 {
+          color: rgb(228, 17, 17);
+          text-align: center;
+        }
+        h3{color: rgb(228, 17, 17);
+          text-align: center;}
+        p {
+          font-family: verdana;
+          font-size: 20px;
+        }
+        .header {
+      background-color:rgb(164, 243, 239);
+      padding: 20px;
+      text-align: center;
+      
+    }
+    </style>
+
+<script type="text/javascript">
+  function check_for_blank()
+  {
+  var flag=0;
+  element=document.getElementsByClassName("mnd");
+  for(var i=0;i<element.length;i++)
+  {
+      if(element[i].value=="")
+      {
+          flag=1;
+          break;
+      }
+  }
+ 
+  if(flag==1)
+  {
+      alert("Please Enter Username and password");
+      return false;
+  }
+  else
+  return true;
+  }
+ </script>
+    
+</head>
+
+<body>
+  <div class="header">
+   <h1> BuyNow </h1>
+   <h3> You are one step away from booking ticket enjoy</h3>
+   <img title ="BuyNow Logo" STYLE=" position:absolute; TOP:20px; LEFT:45px; WIDTH:5cm; HEIGHT:5cm ;" src="logo.png" >  
+  </div> 
+
+
+   <div class="w3-container w3-blue">
+    <h2>Ticket Booking </h2>
+  </div>
+  
+  <form id="booking"  action="ticket.php" method="POST" class="w3-container" onsubmit="return check_for_blank()">
+	<label for="movie">Choose a movie:</label>
+	<select name="movie" >
+  <option value="none">Choose movie</option>
+  <option value="Satya Meva jayate">Satya Meva jayate</option>
+  <option value="Silence">Silence</option>
+  <option value="KGF 2">KGF 2</option>
+  <option value="Robert">Robert</option>
+  </select>
+	<br>
+	  
+	<label for="theatre">Choose a theatre:</label>
+	<select name="theatre" form="booking" id="theatre">
+  <option value="none">Choose theatre</option>
+  <option value="SKaamakhya">Kaamakhya</option>
+  <option value="PVR orion mall">PVR orion mall</option>
+  <option value="Gopalan cinemas 1">Gopalan cinemas 1</option>
+  <option value="GT WORLD MALL">GT WORLD MALL</option>
+  </select>
+	<br>
+	  
+	<label for="tICKET">Choose Number of seats:</label>
+	<select name="ticket" form="booking" id="ticket">
+  <option value="none">Choose Number of seats</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  </select>
+  <br>
+  
+  <label for="tICKET">Choose timings:</label>
+	<select name="time" form="booking">
+  <option value="none">Choose timings</option>
+  <option value="10:00 AM">10:00 AM</option>
+  <option value="2:00 PM">2:00 PM</option>
+  <option value="7:00 PM">7:00 PM</option>
+  <option value="10:00 PM">10:00 PM</option>
+  </select>
+  <br>
+  <p>
+    <button class="button2 amr-input-1" type="submit" value="Bookticket">Book Ticket</button>
+    <button class="button2 amr-input-1" type="reset" value="reset">Clear</button>
+  </p>
+  </form>
+  
+
+</body>
+</html>

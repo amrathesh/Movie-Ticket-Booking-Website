@@ -1,0 +1,13 @@
+
+<?php
+if(!empty($_GET['message'])) {
+    $message = $_GET['message'];
+    $whichmessage =intval($message);
+    if($whichmessage == 1)
+    echo '<div class = success >';
+    echo "<h3>"."<font color ='white'>"."Signed in Successfully!"."</font"."<br>";
+    echo "</h3>";
+    echo '</div>';
+    }
+?>
+    

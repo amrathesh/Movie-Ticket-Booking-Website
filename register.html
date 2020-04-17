@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>main content</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="format.css">
+
+    
+    
+    <style>
+              
+        h1 {
+          color: rgb(228, 17, 17);
+          text-align: center;
+        }
+        h3{color: rgb(228, 17, 17);
+          text-align: center;}
+        p {
+          font-family: verdana;
+          font-size: 20px;
+        }
+        .header {
+      background-color:rgb(164, 243, 239);
+      padding: 20px;
+      text-align: center;
+      
+    }
+    </style>
+
+<script type="text/javascript">
+  function check_for_blank()
+  {
+  var flag=0;
+  element=document.getElementsByClassName("mnd");
+  for(var i=0;i<element.length;i++)
+  {
+      if(element[i].value=="")
+      {
+          flag=1;
+          break;
+      }
+  }
+ 
+  if(flag==1)
+  {
+      alert("Please Enter The Empty Fields");
+      return false;
+  }
+  else
+  return true;
+  }
+ </script>
+    
+</head>
+
+<body>
+  <div class="header">
+   <h1>Welcome to BuyNow </h1>
+   <h3>Please login or signUp to access further</h3>
+   <img title ="BuyNow Logo" STYLE=" position:absolute; TOP:20px; LEFT:45px; WIDTH:5cm; HEIGHT:5cm" src="logo.png" >  
+  </div> 
+
+
+   <div class="w3-container w3-blue">
+    <h2>Sign Up </h2>
+  </div>
+  
+  <form  action="signup.php" method="POST" class="w3-container" onsubmit="return check_for_blank()">
+    <p>
+    <label>First Name</label>
+    <input class="mnd" type="text" name= "f_name" placeholder="Enter First Name"></p>
+    <p>
+    <label>Last Name</label>
+    <input class="mnd" type="text" name= "l_name" placeholder="Enter Last Name"></p>
+    <p>
+    <label>Email</label>
+    <input class="mnd" type="text" name= "email" placeholder="Enter your Email"></p>
+    <p>
+    <label>Phone Number </label>
+    <input class="mnd" type="number" name="phone" placeholder="Enter your Phone number"></p>
+    <p>
+    <label>User Name </label>
+    <input class="mnd" type="text" id="username" name="username" placeholder="Create a username"></p>
+    <p>
+    <label>Password :</label>
+    <input class="mnd" type="password" id="password " name="password" placeholder="Password"></p>
+    
+    <p>
+      <button class="button2 amr-input-1" type="submit" value="Submit">Submit</button>
+      <button class="button2 amr-input-1" type="reset" value="reset">Clear</button>
+    </p>
+
+  </form>
+
+</body>
+</html>
